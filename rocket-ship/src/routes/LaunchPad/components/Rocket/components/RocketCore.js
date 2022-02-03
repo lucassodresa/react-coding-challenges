@@ -17,7 +17,9 @@ function timeToPositionPercent(startTime) {
 }
 
 function generateEmptyListEls(type, quantity) {
-  //   console.log("executou");
+  // Explanation:
+  // It was needded to create an unique key
+  // to each element to react map exact element to be update.
   return [...Array(quantity)].map((item, key) => <li key={`${type}-${key}`} />);
 }
 
