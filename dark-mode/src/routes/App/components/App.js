@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import "../styles/_app.scss";
 
+// create a state to define the actions to do if dark mode is active
+
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
