@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { DarkModeContext } from "../../../context/DarkModeContext";
 import "../styles/_app.scss";
 
-// create a state to define the actions to do if dark mode is active
+// consume context and change the darkmode state provided by DarkModeContext on click
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useContext(DarkModeContext);
 
   function handleClick() {
-    const darkModeClass = "dark-mode";
-    const htmlElement = document.querySelector("html");
-
-    if (isDarkMode) {
-      htmlElement.classList.remove(darkModeClass);
-    } else {
-      htmlElement.classList.add(darkModeClass);
-    }
     setIsDarkMode(!isDarkMode);
   }
 
