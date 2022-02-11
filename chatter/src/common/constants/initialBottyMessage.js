@@ -1,1 +1,2 @@
-export default 'Hi! My name\'s Botty.';
+const message = "Hi! My name's Botty.";
+export default message;
